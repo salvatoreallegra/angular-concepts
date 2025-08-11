@@ -1,1 +1,22 @@
-<p>directives works!</p>
+<h2>Directives & Control Flow</h2>
+
+<button (click)="toggle()">Toggle</button>
+@if (show) {
+  <p>Visible</p>
+} @else {
+  <p>Hidden</p>
+}
+
+<ul>
+  @for (it of items; track it; let i = $index) {
+    <li>#{{ i }} - {{ it }}</li>
+  }
+</ul>
+
+@switch (role) {
+  @case ('admin') { <p>Admin view</p> }
+  @case ('user')  { <p>User view</p> }
+}
+
+<button (click)="flipDanger()">Toggle class</button>
+<p [class]="danger ? 'danger' : ''">Class toggles via property binding</p>
