@@ -1,1 +1,5 @@
-<p>binding works!</p>
+<h2>Data Binding</h2>
+<p>Hello, {{ username }}!</p>
+<img [src]="photoUrl" alt="Avatar">
+<button (click)="increment()">Clicked: {{ clicks }}</button>
+<input [(ngModel)]="username" placeholder="Type name">
