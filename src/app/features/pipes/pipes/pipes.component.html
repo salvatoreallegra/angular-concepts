@@ -1,1 +1,19 @@
-<p>pipes works!</p>
+<h2>Built-in Pipes</h2>
+
+<p><strong>Date (medium):</strong> {{ today | date:'medium' }}</p>
+<p><strong>Date (custom):</strong> {{ today | date:'yyyy-MM-dd HH:mm' }}</p>
+
+<p><strong>Currency (USD):</strong> {{ price | currency:'USD':'symbol' }}</p>
+<p><strong>Currency (no decimals):</strong> {{ price | currency:'USD':'symbol':'1.0-0' }}</p>
+
+<p><strong>Number:</strong> {{ qty | number:'1.2-2' }}</p>
+<p><strong>Percent:</strong> {{ ratio | percent:'1.1-2' }}</p>
+
+<p><strong>Upper:</strong> {{ text | uppercase }}</p>
+<p><strong>Lower:</strong> {{ text | lowercase }}</p>
+<p><strong>Title:</strong> {{ text | titlecase }}</p>
+
+<p><strong>Slice (text 0..12):</strong> {{ text | slice:0:12 }}</p>
+<p><strong>Slice (list 1..4):</strong> {{ list | slice:1:4 | json }}</p>
+
+<p><strong>Object (json):</strong> {{ obj | json }}</p>
